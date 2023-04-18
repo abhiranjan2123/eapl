@@ -1,0 +1,24 @@
+.App{
+  background-color: #ffffff;
+position:absolute;
+margin-top: 0;
+  height:150px;
+  width: 100%;
+
+}
+.logo{
+  position: relative;
+
+}
+
+.cardCont{
+position: relative;
+margin:100px;
+}
+
+.MuiCard-root{
+  box-sizing: border-box;
+  position:relative;
+  min-height:600px;
+  min-width :400px;
+}
