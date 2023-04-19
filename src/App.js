@@ -1,33 +1,28 @@
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import Card  from "../src/components/Card";
 import './App.css';
 import NavBar from "./components/NavBar"
-import i from "../src/images/Programmable Alarm Annunciators M3.png"
-import s from "../src/images/Sequential Timer ST 15M2.png"
-
+import content from "./Content";
+import Box from "@mui/material/Box";
+import Details from "./components/Details"
 function App() {
-
-  let state={
-    name:"Programmable Alarm ",
-    details:"C&R panels, Transformer panels, DG set panels, Fire annunciation panels, Instrumentation panels and many more"
-  }
-
-  let a={
-    name:"Sequential Timers- S Series",
-    details:"Bag Filter systems, Dust pollution systems, Air handling systems, MCC panels, Pneumatic Conveyors, Process Industries and many more."
-  }
-    
   return (
     <>
    <NavBar />
-   <div className="cardCont">
-    <Grid  container spacing={10}  alignItems="center"   justifyContent="center" >
-      <Grid item> <Card name={state.name} details={state.details} image={i} /></Grid>
-      <Grid item> <Card name={a.name} details={a.details} image={s} /></Grid>
-  
-      
+   <Box sx={{bgcolor:"white",height:100,width:1}} position="absolute">
+    <Typography color="black" fontFamily="arial"  sx={{fontSize:{xs:20,lg:30}}} align="inherit" >INVENTORY</Typography>
+   </Box>
+   <section>
+    
+    <section><div className="cardCont">
+    <Grid  container spacing={2}  alignItems="center"   justifyContent="center" sx={{mt:{lg:15,xs:15}}} position="static" >
+     {content.map(index=>(
+      <Grid item><Card name={index.name} details={index.details} image={index.image} link={index.link} /></Grid>
+     ))}
    </Grid>
-   </div>
+   </div></section>
+   </section>
+   
    
    </>
   );

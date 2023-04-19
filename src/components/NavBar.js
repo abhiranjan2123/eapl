@@ -14,6 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { createTheme } from '@mui/material/styles';
 import logo from "../../src/logo.png"
 import { ThemeProvider } from '@emotion/react';
+import kruger from "../../src/images/kruger.png"
 
 
 const pages = ['Products', 'Pricing', 'Blog'];
@@ -46,16 +47,18 @@ const theme = createTheme({
     <AppBar position="static" >
       <Container maxWidth="xl" >
         <Toolbar disableGutters>
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="logo" width="80"/>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
-              size="large"
+              sx={{position:'absolute',right:1,top:1}}
+              size="medium"
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="black"
+              
             >
               <MenuIcon />
             </IconButton>
@@ -64,12 +67,12 @@ const theme = createTheme({
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: 'bottom',
-                horizontal: 'left',
+                horizontal: 'right',
               }}
               keepMounted
               transformOrigin={{
                 vertical: 'top',
-                horizontal: 'left',
+                horizontal: 'right',
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
@@ -86,7 +89,7 @@ const theme = createTheme({
           </Box>
           
    
-         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} justifyContent="end">
             {pages.map((page) => (
               <Button
                 key={page}
@@ -96,7 +99,9 @@ const theme = createTheme({
               >
                 {page}
               </Button>
+              
             ))}
+            <img src={kruger} alt="logo" width="150" height="10"/>
           </Box>
 
          
