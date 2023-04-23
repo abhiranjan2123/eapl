@@ -1,10 +1,13 @@
 import { Grid, Typography } from "@mui/material";
-import Card  from "../src/components/Card";
-import './App.css';
+import Card  from "./components/Card";
+// import './App.css';
 import NavBar from "./components/NavBar"
 import content from "./Content";
 import Box from "@mui/material/Box";
-import Details from "./components/Details"
+// import Details from "./components/Details"
+// import File from "./components/File"
+import ProductDetailsPage from "./components/product_page/ProductDetailsPage"
+
 function App() {
   return (
     <>
@@ -15,12 +18,20 @@ function App() {
    <section>
     
     <section><div className="cardCont">
+      
     <Grid  container spacing={2}  alignItems="center"   justifyContent="center" sx={{mt:{lg:15,xs:15}}} position="static" >
+   
      {content.map(index=>(
-      <Grid item><Card name={index.name} details={index.details} image={index.image} link={index.link} /></Grid>
+      <Grid item><Card name={index.name} details={index.details} image={index.image} link={index.link} />
+  
+      
+      </Grid>
      ))}
+   
    </Grid>
    </div></section>
+ <ProductDetailsPage />
+ 
    </section>
    
    
