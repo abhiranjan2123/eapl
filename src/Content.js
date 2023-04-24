@@ -1,6 +1,7 @@
-import i from "../src/images/Programmable Alarm Annunciators M3.png"
-import s from "../src/images/Sequential Timer ST 15M2.png"
+import i from "../src/images/img2.jpeg"
+import s from "../src/images/img3.jpeg"
 const content = [{
+   
     name: "Programmable alarm ",
     details: "C&R panels, Transformer panels, DG set panels, Fire annunciation panels, Instrumentation panels and many more",
     image:i,

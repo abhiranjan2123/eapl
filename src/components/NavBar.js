@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { createTheme } from '@mui/material/styles';
 import logo from "../../src/logo.png"
 import { ThemeProvider } from '@emotion/react';
-import kruger from "../../src/images/kruger.png"
+import kruger from "../../src/images/img.png"
 
 
 const pages = ['Products', 'Pricing', 'Blog'];
