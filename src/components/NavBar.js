@@ -12,7 +12,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
 import { createTheme } from '@mui/material/styles';
-import logo from "../../src/logo.png"
+import logo from "../../src/images/logo.png"
 import { ThemeProvider } from '@emotion/react';
 import kruger from "../../src/images/img.png"
 

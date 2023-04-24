@@ -1,41 +1,18 @@
-import { Grid, Typography } from "@mui/material";
-import Card  from "./components/Card";
-// import './App.css';
-import NavBar from "./components/NavBar"
-import content from "./Content";
-import Box from "@mui/material/Box";
-// import Details from "./components/Details"
-// import File from "./components/File"
+
+
+import { BrowserRouter,Routes,Route } from "react-router-dom";
 import ProductDetailsPage from "./components/product_page/ProductDetailsPage"
+import HomePage from "./components/HomePage";
 
 function App() {
   return (
-    <>
-   <NavBar />
-   <Box sx={{bgcolor:"white",height:100,width:1}} position="absolute">
-    <Typography color="black" fontFamily="arial"  sx={{fontSize:{xs:20,lg:30}}} align="inherit" >INVENTORY</Typography>
-   </Box>
-   <section>
-    
-    <section><div className="cardCont">
-      
-    <Grid  container spacing={2}  alignItems="center"   justifyContent="center" sx={{mt:{lg:15,xs:15}}} position="static" >
-   
-     {content.map(index=>(
-      <Grid item><Card name={index.name} details={index.details} image={index.image} link={index.link} />
-  
-      
-      </Grid>
-     ))}
-   
-   </Grid>
-   </div></section>
- <ProductDetailsPage />
- 
-   </section>
-   
-   
-   </>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<HomePage />}></Route>
+      <Route path="/ProductDetails" element={<ProductDetailsPage />}></Route>
+    </Routes>
+    </BrowserRouter>
+
   );
 }
 

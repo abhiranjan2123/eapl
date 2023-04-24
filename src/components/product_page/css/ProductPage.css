@@ -13,7 +13,7 @@
   .details .big-img{
     max-width: 500px;
     min-width: 290px;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin: 25px;
   }
   .big-img img{
